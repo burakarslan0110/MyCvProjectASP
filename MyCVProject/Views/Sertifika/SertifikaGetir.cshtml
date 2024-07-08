@@ -1,0 +1,25 @@
+﻿@model MyCVProject.Models.Entity.Sertifikalarim
+@{
+    ViewBag.Title = "SertifikaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Sertifika Güncelleme</h4>
+<br />
+<form method="post">
+    @Html.Label("Sertifika Başlık:")
+    @Html.TextBoxFor(a => a.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sertifika Açıklaması:")
+    @Html.TextBoxFor(a => a.Aciklama, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sertifika Tarihi:")
+    @Html.TextBoxFor(a => a.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sertifika Doğrulama:")
+    @Html.TextBoxFor(a => a.Dogrulama, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Sertifikayı Güncelle</button>
+</form>
+

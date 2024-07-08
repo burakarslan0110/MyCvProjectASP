@@ -1,0 +1,33 @@
+﻿@using MyCVProject.Models.Entity
+@model List<SosyalMedya>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Sosyal Medya Yönetimi</h2>
+<br /><a href="/SosyalMedya/SosyalMedyaEkle/" class="btn btn-primary">Yeni Sosyal Medya Ekle</a>
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Sosyal Medya Adı</th>
+        <th>Durum</th>
+        <th>Pasifleştir</th>
+        <th>Düzenle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Ad</td>
+            @if (x.Durum == true)
+            {<td>Aktif</td>}
+            else
+            { <td> Pasif </td>}
+
+            <td><a href="/SosyalMedya/SosyalMedyaPasiflestir/@x.ID" class="btn btn-danger">Pasifleştir</a></td>
+            <td><a href="/SosyalMedya/SosyalMedyaDuzenle/@x.ID" class="btn btn-warning">Düzenle</a></td>
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,33 @@
+﻿@using MyCVProject.Models.Entity
+@model List<Egitimlerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Egitim Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Başlık</th>
+        <th>Alt Başlık 1</th>
+        <th>Alt Başlık 2</th>
+        <th>Tarih</th>
+        <th>Ortalama</th>
+        <th>Sil</th>
+        <th>Düzenle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Baslik</td>
+            <td>@x.AltBaslik1</td>
+            <td>@x.AltBaslik2</td>
+            <td>@x.Tarih</td>
+            <td>@x.Ortalama</td>
+            <td><a href="/Egitim/EgitimSil/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Egitim/EgitimGetir/@x.ID" class="btn btn-warning">Düzenle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Egitim/EgitimEkle" class="btn btn-primary">Yeni Eğitim Ekle</a>
+

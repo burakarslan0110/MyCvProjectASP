@@ -1,0 +1,28 @@
+﻿@using MyCVProject.Models.Entity
+@model List<Sertifikalarim>
+
+<style>
+    .descriptionS {
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 2px;
+        line-height: 1.6;
+        font-size: 20px;
+        font-family: 'Segoe UI'
+    }
+</style>
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">SERTİFİKALARIM VE ROZETLERİM</h2>
+    @foreach (var item in Model)
+    {
+        <h3 class="subheading">@item.Baslik</h3>
+        <p class="descriptionS">• @item.Aciklama @item.Tarih</p>
+        if (item.Dogrulama != null)
+        {
+            <p><a href="@item.Dogrulama" target="_blank" class="descriptionP">✅ Sertifika Doğrulama </a></p>
+        }
+    }
+</div>

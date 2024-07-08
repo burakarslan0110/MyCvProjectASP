@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CvDbModelStoreContainer" CdmEntityContainer="CvDbEntities">
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="CvDbModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Parola" ColumnName="Parola" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deneyimlerim">
+      <EntityTypeMapping TypeName="CvDbModel.Deneyimlerim">
+        <MappingFragment StoreEntitySet="Deneyimlerim">
+          <ScalarProperty Name="DeneyimLink" ColumnName="DeneyimLink" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="AltBaslik" ColumnName="AltBaslik" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Egitimlerim">
+      <EntityTypeMapping TypeName="CvDbModel.Egitimlerim">
+        <MappingFragment StoreEntitySet="Egitimlerim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="AltBaslik1" ColumnName="AltBaslik1" />
+          <ScalarProperty Name="AltBaslik2" ColumnName="AltBaslik2" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Ortalama" ColumnName="Ortalama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hakkimda">
+      <EntityTypeMapping TypeName="CvDbModel.Hakkimda">
+        <MappingFragment StoreEntitySet="Hakkimda">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Eposta" ColumnName="Eposta" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Iletisim">
+      <EntityTypeMapping TypeName="CvDbModel.Iletisim">
+        <MappingFragment StoreEntitySet="Iletisim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Eposta" ColumnName="Eposta" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projelerim">
+      <EntityTypeMapping TypeName="CvDbModel.Projelerim">
+        <MappingFragment StoreEntitySet="Projelerim">
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Baglantı" ColumnName="Baglantı" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Aciklama1" ColumnName="Aciklama1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sertifikalarim">
+      <EntityTypeMapping TypeName="CvDbModel.Sertifikalarim">
+        <MappingFragment StoreEntitySet="Sertifikalarim">
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Dogrulama" ColumnName="Dogrulama" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yeteneklerim">
+      <EntityTypeMapping TypeName="CvDbModel.Yeteneklerim">
+        <MappingFragment StoreEntitySet="Yeteneklerim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SosyalMedya">
+      <EntityTypeMapping TypeName="CvDbModel.SosyalMedya">
+        <MappingFragment StoreEntitySet="SosyalMedya">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Ikon" ColumnName="Ikon" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

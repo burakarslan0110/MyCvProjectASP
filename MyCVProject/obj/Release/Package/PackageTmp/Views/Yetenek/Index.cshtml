@@ -1,0 +1,28 @@
+﻿@using MyCVProject.Models.Entity
+@model List<Yeteneklerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yetenek Listesi</h2>
+<style>
+</style>
+<table class="table table-bordered">
+
+    <tr>
+        <th>Yetenek</th>
+        <th>Sil</th>
+        <th>Düzenle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Yetenek</td>
+            <td><a href="/Yetenek/YetenekSil/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Yetenek/YetenekGetir/@item.ID" class="btn btn-warning">Düzenle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Yetenek/YetenekEkle/" class="btn btn-primary">Yeni Yetenek Ekle</a>

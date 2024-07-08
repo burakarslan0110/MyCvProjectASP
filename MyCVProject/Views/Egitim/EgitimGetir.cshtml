@@ -1,0 +1,28 @@
+﻿@model MyCVProject.Models.Entity.Egitimlerim
+@{
+    ViewBag.Title = "EgitimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Eğitimi Güncelleme</h4>
+<br />
+<form method="post">
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(n => n.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık 1")
+    @Html.TextBoxFor(n => n.AltBaslik1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık 2")
+    @Html.TextBoxFor(n => n.AltBaslik2, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(n => n.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ortalama")
+    @Html.TextBoxFor(n => n.Ortalama, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Eğitimi Güncelle</button>
+</form>
+

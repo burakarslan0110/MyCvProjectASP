@@ -1,0 +1,31 @@
+﻿@using MyCVProject.Models.Entity
+@using MyCVProject.Truncate
+@model List<Projelerim>
+@{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+    <br />
+    <h2>Proje Listesi</h2>
+<br/>
+    <table class="table table-bordered">
+        <tr>
+            <th>Proje Başlığı</th>
+            <th>Proje Açıklaması</th>
+            <th>Proje Bağlantısı</th>
+            <th>Sil</th>
+            <th>Düzenle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Baslik.Truncate(50)</td>
+                <td>@item.Aciklama1.Truncate(50)</td>
+                <td>@item.Baglantı.Truncate(40)</td>
+                <td><a href="/Proje/ProjeSil/@item.ID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Proje/ProjeGetir/@item.ID" class="btn btn-warning">Düzenle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Proje/ProjeEkle/" class="btn btn-primary">Yeni Proje Ekle</a>
+

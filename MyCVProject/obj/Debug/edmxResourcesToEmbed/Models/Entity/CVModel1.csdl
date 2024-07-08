@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CvDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Parola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Deneyimlerim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AltBaslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeneyimLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Egitimlerim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AltBaslik1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AltBaslik2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ortalama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Hakkimda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Eposta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Iletisim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Eposta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Konu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Mesaj" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Projelerim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Aciklama1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Baglantı" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sertifikalarim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Dogrulama" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Baslik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Yeteneklerim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Yetenek" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="CvDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin" EntityType="Self.Admin" />
+    <EntitySet Name="Deneyimlerim" EntityType="Self.Deneyimlerim" />
+    <EntitySet Name="Egitimlerim" EntityType="Self.Egitimlerim" />
+    <EntitySet Name="Hakkimda" EntityType="Self.Hakkimda" />
+    <EntitySet Name="Iletisim" EntityType="Self.Iletisim" />
+    <EntitySet Name="Projelerim" EntityType="Self.Projelerim" />
+    <EntitySet Name="Sertifikalarim" EntityType="Self.Sertifikalarim" />
+    <EntitySet Name="Yeteneklerim" EntityType="Self.Yeteneklerim" />
+    <EntitySet Name="SosyalMedya" EntityType="CvDbModel.SosyalMedya" />
+  </EntityContainer>
+  <EntityType Name="SosyalMedya">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Link" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Ikon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Durum" Type="Boolean" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,27 @@
+﻿@using MyCVProject.Models.Entity
+@model List<Projelerim>
+
+<style>
+    .descriptionP {
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 2px;
+        line-height: 1.6;
+        font-size: 20px;
+        font-family: 'Segoe UI'
+    }
+</style>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">PROJELERİM</h2>
+    @foreach (var item in Model)
+    {
+        <h3 class="subheading">@item.Baslik</h3>
+        <p class="descriptionP">• @item.Aciklama1</p>
+        if (item.Baglantı != null)
+        {
+            <p><a href="@item.Baglantı" target="_blank" class="descriptionP" >🔗 Proje Bağlantısı</a></p>
+        }
+    }
+</div>

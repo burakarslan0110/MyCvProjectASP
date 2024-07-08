@@ -1,0 +1,35 @@
+﻿@using MyCVProject.Models.Entity
+@model List<Deneyimlerim>
+
+<style>
+    .descriptionD {
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 2px;
+        line-height: 1.6;
+        font-size: 20px;
+        font-family: 'Segoe UI'
+    }
+</style>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">DENEYİMLERİM</h2>
+    @foreach (var item in Model)
+    {
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0">@item.Baslik</h3>
+                <div class="subheading mb-3">@item.AltBaslik</div>
+                <p class="descriptionD">• @item.Aciklama</p>
+                @if (item.DeneyimLink != null)
+                {
+                    <a href="@item.DeneyimLink" target="_blank" class="descriptionD">🔗 Deneyim Bağlantısı</a>
+                }
+
+
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">@item.Tarih</span></div>
+        </div>
+    }
+</div>

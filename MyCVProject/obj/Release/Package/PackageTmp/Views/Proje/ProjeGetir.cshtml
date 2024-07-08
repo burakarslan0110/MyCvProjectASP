@@ -1,0 +1,22 @@
+﻿@model MyCVProject.Models.Entity.Projelerim
+
+@{
+    ViewBag.Title = "ProjeGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Proje Güncelleme</h2>
+<br />
+<form method="post">
+    @Html.Label("Proje Başlığı: ")
+    @Html.TextAreaFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Proje Açıklaması: ")
+    @Html.TextAreaFor(x => x.Aciklama1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Proje Bağlantısı:")
+    @Html.TextBoxFor(x => x.Baglantı, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Projeyi Güncelle</button>
+</form>
+

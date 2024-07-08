@@ -1,0 +1,28 @@
+﻿@using MyCVProject.Models.Entity
+@model List<Yeteneklerim>
+
+<style>
+    .descriptionY {
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 2px;
+        line-height: 1.6;
+        font-size: 22px;
+        font-family: 'Segoe UI'
+    }
+</style>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">YETENEKLERİM</h2>
+    <div class="subheading mb-3">BECERİLERİM, PROGRAMLAMA DİLLERİ VE KULLANDIĞIM ARAÇLAR</div>
+    <ul class="fa-ul mb-0">
+        @foreach (var item in Model)
+        {
+            <li>
+                <span class="descriptionY">• @item.Yetenek</span>
+                
+            </li>
+        }
+    </ul>
+</div>

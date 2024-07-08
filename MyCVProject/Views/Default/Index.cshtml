@@ -1,0 +1,111 @@
+﻿@using MyCVProject.Models.Entity
+@model List<Hakkimda>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    @foreach (var item in Model)
+    {
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="@item.Aciklama" />
+        <meta name="author" content="" />
+        <title>@item.Ad @item.Soyad CV</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/Resume-Theme/css/styles.css" rel="stylesheet" />
+    }
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Burak Arslan</span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="~/profile.jpg" alt="" /></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hakkimda">HAKKIMDA</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#deneyimlerim">DENEYİMLERİM</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#egitim">EĞİTİM HAYATIM</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#yeteneklerim">YETENEKLERİM</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projelerim">PROJELERİM</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sertifikalarim">SERTİFİKALARIM</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="~/Ozgecmisim.pdf" target="_blank">ÖZGEÇMİŞİM</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+        <!-- About-->
+        <section class="resume-section" id="hakkimda">
+            @foreach (var item in Model)
+            {
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        @item.Ad
+                        <span class="text-primary">@item.Soyad</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        @item.Adres · @item.Telefon
+                        <a href="mailto:@item.Eposta">@item.Eposta</a>
+                    </div>
+                    <p class="descriptionD">@item.Aciklama</p>
+                    @Html.Action("SosyalMedya")
+                </div>
+            }
+        </section>
+        <hr class="m-0" />
+        <!-- Experience-->
+        <section class="resume-section" id="deneyimlerim">
+            @Html.Action("Deneyim")
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="egitim">
+            @Html.Action("Egitim")
+        </section>
+        <hr class="m-0" />
+        <!-- Skills-->
+        <section class="resume-section" id="yeteneklerim">
+            @Html.Action("Yetenek")
+        </section>
+        <hr class="m-0" />
+        <!-- Interests-->
+        <section class="resume-section" id="projelerim">
+            @Html.Action("Proje")
+        </section>
+        <hr class="m-0" />
+        <!-- Awards-->
+        <section class="resume-section" id="sertifikalarim">
+            @Html.Action("Sertifika")
+        </section>
+        <hr class="m-0" />
+
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/Resume-Theme/js/scripts.js"></script>
+    <script>
+    $(document).ready(function () {
+            $(this).on("contextmenu", function () {
+                return false;
+            })
+        });</script>
+</body>
+</html>
+
+
