@@ -12,10 +12,10 @@ Proje klasöründeki CvDb.bak dosyası ile MSSQL veritabanını içe aktardıkta
 Projeyi aynı zamanda kendi CV'im için canlıda kullanıyorum: https://burakarslan.me
 
 ## MyCvProjectASP Ana Sayfa
-![MyCVProjectASP](https://github.com/burakarslan0110/MyCvProjectASP/assets/140614856/64284faf-a493-4e52-858c-ec5496b0e43c)
+![MyCVProjectASP](MyCVProjectASP.gif)
 
 ## MyCvProjectASP Login ve Admin Panel
-![Adsız (1200 x 480 piksel)](https://github.com/burakarslan0110/MyCvProjectASP/assets/140614856/306c80c8-b1e0-4fad-ba68-81164bf938d4)
+![Adsız (1200 x 480 piksel)](MyCVProjectASPAdmin.gif)
 
 
 
